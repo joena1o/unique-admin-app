@@ -9,10 +9,7 @@ class FontClass {
       fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white);
 
   static TextStyle navFontBlack = const TextStyle(
-      fontSize: 12,
-      letterSpacing: 1.5,
-      fontWeight: FontWeight.w500,
-      color: Colors.black);
+      fontSize: 12, fontWeight: FontWeight.w500, color: Colors.black);
 
   static TextStyle infoLabelGray = const TextStyle(
       fontSize: 12, fontWeight: FontWeight.w500, color: Colors.grey);
@@ -24,10 +21,7 @@ class FontClass {
       color: Colors.white);
 
   static TextStyle extraLargeHeaderStyleBlackNormal = const TextStyle(
-      fontSize: 36,
-      fontWeight: FontWeight.w500,
-      letterSpacing: 1.5,
-      color: Colors.black);
+      fontSize: 36, fontWeight: FontWeight.w500, color: Colors.black);
 
   static TextStyle headerStyleBlackNormal = const TextStyle(
       fontSize: 22,
@@ -36,16 +30,10 @@ class FontClass {
       color: Colors.black);
 
   static TextStyle headerStyleMediumBlack = const TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w600,
-      letterSpacing: 1.5,
-      color: Colors.black);
+      fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black);
 
   static TextStyle headerStyleBlack = const TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.w600,
-      letterSpacing: 1.5,
-      color: Colors.black);
+      fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black);
 
   static TextStyle buttonStyleBlack = const TextStyle(
       fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black);

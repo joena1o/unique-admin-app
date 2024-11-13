@@ -147,5 +147,13 @@ class UtilityClass {
       borderRadius: BorderRadius.circular(0),
     );
   }
+
+  static String formatRouteName(String route) {
+    return route
+        .split('-') // Split the string by hyphens
+        .map((word) =>
+            word[0].toUpperCase() + word.substring(1)) // Capitalize each word
+        .join(' '); // Join with spaces
+  }
 //Button Container Styles'
 }

@@ -4,111 +4,89 @@ import 'package:unique_admin_application/utils/font_class.dart';
 import 'package:unique_admin_application/utils/responsive.dart';
 import 'package:unique_admin_application/utils/utility_class.dart';
 
-final List<String> columns = [
-  'Customers',
-  'Product',
-  'User ID',
-  'Order Place',
-  'Amount',
-  'Payment Status',
-  'Order Status',
-];
+class CustomersTable extends StatelessWidget {
+  CustomersTable({super.key});
 
-final List<Map<String, dynamic>> data = [
-  {
-    'Customers': 'John Doe',
-    'Product': 'Wireless Mouse',
-    'User ID': 'U001',
-    'Order Place': '2024-11-10 14:32',
-    'Amount': 29.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Shipped',
-  },
-  {
-    'Customers': 'Jane Smith',
-    'Product': 'Bluetooth Headphones',
-    'User ID': 'U002',
-    'Order Place': '2024-11-10 15:00',
-    'Amount': 89.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Delivered',
-  },
-  {
-    'Customers': 'Michael Johnson',
-    'Product': 'Smart Watch',
-    'User ID': 'U003',
-    'Order Place': '2024-11-11 10:10',
-    'Amount': 199.99,
-    'Payment Status': 'Pending',
-    'Order Status': 'Processing',
-  },
-  {
-    'Customers': 'Emma Davis',
-    'Product': 'Gaming Keyboard',
-    'User ID': 'U004',
-    'Order Place': '2024-11-11 12:45',
-    'Amount': 59.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Shipped',
-  },
-  {
-    'Customers': 'Liam Brown',
-    'Product': 'Laptop Stand',
-    'User ID': 'U005',
-    'Order Place': '2024-11-12 09:30',
-    'Amount': 25.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Delivered',
-  },
-  {
-    'Customers': 'Olivia Wilson',
-    'Product': 'Wireless Keyboard',
-    'User ID': 'U006',
-    'Order Place': '2024-11-12 14:00',
-    'Amount': 39.99,
-    'Payment Status': 'Pending',
-    'Order Status': 'Processing',
-  },
-  {
-    'Customers': 'James Moore',
-    'Product': 'Portable Speaker',
-    'User ID': 'U007',
-    'Order Place': '2024-11-13 08:45',
-    'Amount': 69.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Delivered',
-  },
-  {
-    'Customers': 'Isabella Taylor',
-    'Product': 'Phone Case',
-    'User ID': 'U008',
-    'Order Place': '2024-11-13 13:00',
-    'Amount': 15.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Shipped',
-  },
-  {
-    'Customers': 'William Anderson',
-    'Product': 'LED Desk Lamp',
-    'User ID': 'U009',
-    'Order Place': '2024-11-14 16:20',
-    'Amount': 39.99,
-    'Payment Status': 'Pending',
-    'Order Status': 'Processing',
-  },
-  {
-    'Customers': 'Sophia Martinez',
-    'Product': 'Noise Cancelling Headphones',
-    'User ID': 'U010',
-    'Order Place': '2024-11-14 18:00',
-    'Amount': 129.99,
-    'Payment Status': 'Paid',
-    'Order Status': 'Delivered',
-  },
-];
+  final List<String> columns = [
+    'First Name',
+    'Last Name',
+    'User ID',
+    'Address',
+    'Status',
+  ];
 
-class OrderTable extends StatelessWidget {
-  const OrderTable({super.key});
+  final List<Map<String, String>> data = [
+    {
+      'First Name': 'Hyefur',
+      'Last Name': 'Jonathan',
+      'User ID': '1',
+      'Address': 'Kofare',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'Musa',
+      'Last Name': 'Aliyu',
+      'User ID': '2',
+      'Address': 'Yola',
+      'Status': 'inactive',
+    },
+    {
+      'First Name': 'Fatima',
+      'Last Name': 'Usman',
+      'User ID': '3',
+      'Address': 'Jimeta',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'Amina',
+      'Last Name': 'Bello',
+      'User ID': '4',
+      'Address': 'Kofare',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'John',
+      'Last Name': 'Okeke',
+      'User ID': '5',
+      'Address': 'Numan',
+      'Status': 'inactive',
+    },
+    {
+      'First Name': 'Joy',
+      'Last Name': 'Ibrahim',
+      'User ID': '6',
+      'Address': 'Mubi',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'David',
+      'Last Name': 'Emeka',
+      'User ID': '7',
+      'Address': 'Girei',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'Grace',
+      'Last Name': 'Oluwaseun',
+      'User ID': '8',
+      'Address': 'Yola',
+      'Status': 'inactive',
+    },
+    {
+      'First Name': 'Ahmed',
+      'Last Name': 'Garba',
+      'User ID': '9',
+      'Address': 'Kofare',
+      'Status': 'active',
+    },
+    {
+      'First Name': 'Binta',
+      'Last Name': 'Adamu',
+      'User ID': '10',
+      'Address': 'Jimeta',
+      'Status': 'inactive',
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +102,7 @@ class OrderTable extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Orders",
+                    "Users",
                     style: FontClass.headerStyleBlack,
                   ),
                   const SizedBox(
@@ -158,7 +136,7 @@ class OrderTable extends StatelessWidget {
                                       List.generate(columns.length, (index) {
                                 return Padding(
                                   padding: const EdgeInsets.all(10.0),
-                                  child: Text(row[columns[index]].toString(),
+                                  child: Text(row[columns[index]] ?? '',
                                       textAlign: TextAlign.center),
                                 );
                               }));

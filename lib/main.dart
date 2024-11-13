@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:unique_admin_application/core/app_routes.dart';
 import 'package:unique_admin_application/core/config/app_theme.dart';
+// ignore: depend_on_referenced_packages
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 

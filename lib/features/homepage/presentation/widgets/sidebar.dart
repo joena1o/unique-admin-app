@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:unique_admin_application/core/app_colors.dart';
+import 'package:unique_admin_application/core/app_routes.dart';
 import 'package:unique_admin_application/utils/responsive.dart';
 import 'package:unique_admin_application/utils/utility_class.dart';
 
@@ -57,7 +58,7 @@ class _SidebarState extends State<Sidebar> {
             children: [
               GestureDetector(
                 onTap: () {
-                  context.go("/order-history");
+                  context.go(AppRoutes.orderHistory);
                   context.pop();
                 },
                 child: const ListTile(
@@ -65,26 +66,50 @@ class _SidebarState extends State<Sidebar> {
                   "Order History",
                 )),
               ),
-              const ListTile(
-                  title: Text(
-                "Products",
-              )),
-              const ListTile(
-                  title: Text(
-                "Add Product",
-              )),
-              const ListTile(
-                  title: Text(
-                "Reviews",
-              )),
+              GestureDetector(
+                onTap: () {
+                  context.go(AppRoutes.products);
+                  context.pop();
+                },
+                child: const ListTile(
+                    title: Text(
+                  "Products",
+                )),
+              ),
+              GestureDetector(
+                onTap: () {
+                  context.go(AppRoutes.addProduct);
+                  context.pop();
+                },
+                child: const ListTile(
+                    title: Text(
+                  "Add Product",
+                )),
+              ),
+              GestureDetector(
+                onTap: () {
+                  context.go(AppRoutes.reviews);
+                  context.pop();
+                },
+                child: const ListTile(
+                    title: Text(
+                  "Reviews",
+                )),
+              ),
             ], // Use the state list to determine the icon
           ),
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.people),
-            title: Text("Users"),
+          GestureDetector(
+            onTap: () {
+              context.go(AppRoutes.users);
+              context.pop();
+            },
+            child: const ListTile(
+              leading: Icon(Icons.people),
+              title: Text("Users"),
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -100,9 +125,14 @@ class _SidebarState extends State<Sidebar> {
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
-            leading: Icon(Icons.logout),
-            title: Text("Logout"),
+          GestureDetector(
+            onTap: () {
+              context.go("/login");
+            },
+            child: const ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
+            ),
           ),
         ],
       ),

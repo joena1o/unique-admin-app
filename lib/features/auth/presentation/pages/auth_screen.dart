@@ -28,7 +28,11 @@ class _AuthScreenState extends State<AuthScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: Responsive.getSize(context).width * .3,
+              width: Responsive.isMobile(context)
+                  ? Responsive.getSize(context).width * .7
+                  : Responsive.isMobile(context)
+                      ? Responsive.getSize(context).width * .6
+                      : Responsive.getSize(context).width * .4,
               alignment: Alignment.center,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

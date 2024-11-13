@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
+import 'package:go_router/go_router.dart';
 import 'package:unique_admin_application/core/app_colors.dart';
 import 'package:unique_admin_application/features/homepage/presentation/widgets/navbar.dart';
 import 'package:unique_admin_application/features/homepage/presentation/widgets/sidebar.dart';
@@ -21,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool collapsed = false;
   @override
   Widget build(BuildContext context) {
+    final currentPath = GoRouter.of(context).location.split("/")[1];
     return Scaffold(
       key: _scaffoldKey,
       drawer: Drawer(
@@ -65,7 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: BreadCrumb(
                         items: <BreadCrumbItem>[
                           BreadCrumbItem(content: const Text('Home')),
-                          BreadCrumbItem(content: const Text('Products')),
+                          if (UtilityClass.formatRouteName(currentPath) !=
+                              "Home")
+                            BreadCrumbItem(
+                                content: Text(
+                                    UtilityClass.formatRouteName(currentPath))),
                         ],
                         divider: Icon(
                           Icons.chevron_right,

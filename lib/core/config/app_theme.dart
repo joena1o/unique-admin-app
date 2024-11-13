@@ -14,7 +14,7 @@ class MainAppTheme {
         ),
       ),
       focusedBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        //borderRadius: BorderRadius.all(Radius.circular(15)),
         borderSide: BorderSide(
           color: Colors.blue, // Border color when focused
           width: 1, // Border width when focused
@@ -28,7 +28,7 @@ class MainAppTheme {
         ),
       ),
       errorBorder: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        //borderRadius: BorderRadius.all(Radius.circular(15)),
         borderSide: BorderSide(
           color: Colors.red, // Error border color
           width: 1,
@@ -50,7 +50,7 @@ class MainAppTheme {
             shadowColor: Colors.transparent,
             foregroundColor: AppColors.lightColor,
             textStyle:
-                const TextStyle(fontSize: 14, fontWeight: FontWeight.w600))),
+                const TextStyle(fontSize: 14, fontWeight: FontWeight.w500))),
     scaffoldBackgroundColor: Colors.white,
     dividerColor: AppColors.borderGray,
     dividerTheme: DividerThemeData(color: AppColors.borderGray, thickness: 1),
