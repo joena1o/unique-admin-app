@@ -25,6 +25,7 @@ class _DashboardTabState extends State<DashboardTab> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Responsive.isExtraLarge(context)
+                //Extra Large Screen
                 ? Row(
                     children: [
                       Expanded(
@@ -70,6 +71,7 @@ class _DashboardTabState extends State<DashboardTab> {
                       ),
                     ],
                   )
+                // Mobile View
                 : Responsive.isMobile(context)
                     ? Column(
                         children: [
@@ -108,6 +110,7 @@ class _DashboardTabState extends State<DashboardTab> {
                           ),
                         ],
                       )
+                    // Tablet and larger Screen
                     : Column(
                         children: [
                           Row(
@@ -169,9 +172,10 @@ class _DashboardTabState extends State<DashboardTab> {
             padding: UtilityClass.horizontalPadding,
             child: Responsive.isDesktop(context)
                 ? Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                        flex: 2,
+                        flex: Responsive.isExtraLarge(context) ? 2 : 1,
                         child: Card(
                             elevation: 0,
                             color: AppColors.lightColor,
@@ -179,8 +183,8 @@ class _DashboardTabState extends State<DashboardTab> {
                               children: [
                                 Expanded(
                                   child: Container(
-                                      padding: const EdgeInsets.all(25.0),
                                       height: 400,
+                                      padding: const EdgeInsets.all(35.0),
                                       child: const DashboardChart()),
                                 ),
                               ],
@@ -211,8 +215,10 @@ class _DashboardTabState extends State<DashboardTab> {
                             children: [
                               Expanded(
                                 child: Container(
-                                    padding: const EdgeInsets.all(25.0),
                                     height: 400,
+                                    width: Responsive.getSize(context).width,
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 35.0, horizontal: 30),
                                     child: const DashboardChart()),
                               ),
                             ],
