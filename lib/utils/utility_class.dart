@@ -10,6 +10,9 @@ class UtilityClass {
 
   static EdgeInsets verticalPadding = const EdgeInsets.symmetric(vertical: 20);
 
+  static EdgeInsets verticalPaddingHalf =
+      const EdgeInsets.symmetric(vertical: 10);
+
   static String emailPattern =
       r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
 

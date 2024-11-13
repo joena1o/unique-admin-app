@@ -27,6 +27,7 @@ class _SidebarState extends State<Sidebar> {
           GestureDetector(
               onTap: () {
                 context.go("/home");
+                context.pop();
               },
               child: const ListTile(
                 leading: Icon(Icons.home),
@@ -57,6 +58,7 @@ class _SidebarState extends State<Sidebar> {
               GestureDetector(
                 onTap: () {
                   context.go("/order-history");
+                  context.pop();
                 },
                 child: const ListTile(
                     title: Text(
