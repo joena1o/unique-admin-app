@@ -1,4 +1,4 @@
-package com.example.unique_admin_application
+package com.pollex.unique_admin_application
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,17 +1,19 @@
 import 'package:go_router/go_router.dart';
-import 'package:unique_admin_application/features/add_product/presentation/pages/add_product.dart';
+import 'package:unique_admin_application/features/products/presentation/pages/add_product.dart';
 import 'package:unique_admin_application/features/homepage/presentation/pages/home_page.dart';
 import 'package:unique_admin_application/features/homepage/presentation/tabs/dashboard_tab.dart';
 import 'package:unique_admin_application/features/homepage/presentation/tabs/order_tab.dart';
 import 'package:unique_admin_application/features/homepage/presentation/tabs/review_tab.dart';
 import 'package:unique_admin_application/features/homepage/presentation/tabs/users_tab.dart';
 import 'package:unique_admin_application/features/products/presentation/pages/edit_products.dart';
+import 'package:unique_admin_application/features/products/presentation/pages/product_category.dart';
 import 'package:unique_admin_application/features/products/presentation/pages/products.dart';
 import 'package:unique_admin_application/wrapper.dart';
 
 class AppRoutes {
   static String initial = "/login";
   static String home = "/home";
+  static String productCategory = "/product-category";
   static String orderHistory = "/order-history";
   static String addProduct = "/add-product";
   static String products = "/products";
@@ -59,6 +61,12 @@ final GoRouter _router = GoRouter(
           name: 'edit-products',
           pageBuilder: (context, state) =>
               const NoTransitionPage(child: EditProduct()),
+        ),
+        GoRoute(
+          path: AppRoutes.productCategory,
+          name: 'product-category',
+          pageBuilder: (context, state) =>
+              const NoTransitionPage(child: ProductCategory()),
         ),
         GoRoute(
           path: AppRoutes.users,

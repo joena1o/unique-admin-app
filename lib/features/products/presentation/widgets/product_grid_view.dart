@@ -3,7 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:go_router/go_router.dart';
 import 'package:unique_admin_application/core/app_colors.dart';
 import 'package:unique_admin_application/core/app_routes.dart';
-import 'package:unique_admin_application/features/add_product/presentation/widgets/top_search_sheet.dart';
+import 'package:unique_admin_application/features/products/presentation/widgets/top_search_sheet.dart';
 import 'package:unique_admin_application/utils/font_class.dart';
 import 'package:unique_admin_application/utils/responsive.dart';
 import 'package:unique_admin_application/utils/utility_class.dart';
@@ -98,7 +98,7 @@ class _ProductGridViewState extends State<ProductGridView>
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                              height: 40,
+                              height: 48,
                               decoration: UtilityClass.setButtonDecoration(
                                   AppColors.oranage),
                               child: ElevatedButton(
@@ -111,7 +111,7 @@ class _ProductGridViewState extends State<ProductGridView>
                               width: 20,
                             ),
                             Container(
-                              height: 40,
+                              height: 48,
                               decoration:
                                   UtilityClass.setButtonDecoration(Colors.red),
                               child: ElevatedButton(

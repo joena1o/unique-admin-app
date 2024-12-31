@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:unique_admin_application/core/app_colors.dart';
 import 'package:unique_admin_application/core/app_routes.dart';
+import 'package:unique_admin_application/features/homepage/presentation/provider/home_provider.dart';
 import 'package:unique_admin_application/utils/responsive.dart';
 import 'package:unique_admin_application/utils/utility_class.dart';
 
@@ -28,7 +30,7 @@ class _SidebarState extends State<Sidebar> {
           GestureDetector(
               onTap: () {
                 context.go("/home");
-                context.pop();
+                context.read<HomeProvider>().closeDrawer();
               },
               child: const ListTile(
                 leading: Icon(Icons.home),
@@ -59,7 +61,7 @@ class _SidebarState extends State<Sidebar> {
               GestureDetector(
                 onTap: () {
                   context.go(AppRoutes.orderHistory);
-                  context.pop();
+                  context.read<HomeProvider>().closeDrawer();
                 },
                 child: const ListTile(
                     title: Text(
@@ -69,7 +71,7 @@ class _SidebarState extends State<Sidebar> {
               GestureDetector(
                 onTap: () {
                   context.go(AppRoutes.products);
-                  context.pop();
+                  context.read<HomeProvider>().closeDrawer();
                 },
                 child: const ListTile(
                     title: Text(
@@ -78,8 +80,18 @@ class _SidebarState extends State<Sidebar> {
               ),
               GestureDetector(
                 onTap: () {
+                  context.go(AppRoutes.productCategory);
+                  context.read<HomeProvider>().closeDrawer();
+                },
+                child: const ListTile(
+                    title: Text(
+                  "Product Category",
+                )),
+              ),
+              GestureDetector(
+                onTap: () {
                   context.go(AppRoutes.addProduct);
-                  context.pop();
+                  context.read<HomeProvider>().closeDrawer();
                 },
                 child: const ListTile(
                     title: Text(
@@ -89,7 +101,7 @@ class _SidebarState extends State<Sidebar> {
               GestureDetector(
                 onTap: () {
                   context.go(AppRoutes.reviews);
-                  context.pop();
+                  context.read<HomeProvider>().closeDrawer();
                 },
                 child: const ListTile(
                     title: Text(
@@ -104,7 +116,7 @@ class _SidebarState extends State<Sidebar> {
           GestureDetector(
             onTap: () {
               context.go(AppRoutes.users);
-              context.pop();
+              context.read<HomeProvider>().closeDrawer();
             },
             child: const ListTile(
               leading: Icon(Icons.people),
@@ -128,6 +140,7 @@ class _SidebarState extends State<Sidebar> {
           GestureDetector(
             onTap: () {
               context.go("/login");
+              context.read<HomeProvider>().closeDrawer();
             },
             child: const ListTile(
               leading: Icon(Icons.logout),

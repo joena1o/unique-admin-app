@@ -6,6 +6,7 @@ class MainAppTheme {
     fontFamily: "Montserrat",
     appBarTheme: const AppBarTheme(color: Colors.white),
     inputDecorationTheme: InputDecorationTheme(
+      floatingLabelBehavior: FloatingLabelBehavior.never,
       enabledBorder: const OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(0)),
         borderSide: BorderSide(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:unique_admin_application/core/app_colors.dart';
 import 'package:unique_admin_application/core/app_routes.dart';
-import 'package:unique_admin_application/features/add_product/presentation/widgets/product_grid_view.dart';
+import 'package:unique_admin_application/features/products/presentation/widgets/product_grid_view.dart';
 import 'package:unique_admin_application/utils/font_class.dart';
 import 'package:unique_admin_application/utils/utility_class.dart';
 
